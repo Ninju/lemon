@@ -1,0 +1,3 @@
+== About
+
+High scores server written in Clojure.
