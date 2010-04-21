@@ -1,0 +1,34 @@
+-- initializing
+lime.activateGame({ game_token="SDksd2#eWd2D23D@34f2#RF", api_token="rfERf34wf1D@#1d123d@#ERDS })
+
+-- saving of local and global scores should be transparent
+-- an option is available to turn off remote storage
+--
+-- every score implicitly adds device id, location and timestamp
+--
+-- by default a score that saves locally but fails to upload to the server
+-- will be marked so it can be synced when the operation is requested by the user
+lime.save({
+  score=3439231,
+  level=2,
+  ballSize=34,
+  multiplier=1341,
+  displayName="anonymous",
+  localOnly=false
+})
+
+
+-- scores by default are ordered by submission date
+--
+-- common options
+--
+-- {page=1, perPage=10,
+--  filter=function(options)
+--    return options.level == 2
+--  end}
+lime.localScores  --> tableOf(lime:score)
+lime.remoteScores --> tableOf(lime:score)
+lime.scores --> tableOf(lime:score)
+
+-- syncs scores to the server that haven't been uploaded
+lime.syncScoresToServer
