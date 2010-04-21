@@ -1,7 +1,7 @@
 (ns lime.models
   (:import
     (com.google.appengine.api.datastore DatastoreServiceFactory Entity Key Query Query$FilterOperator KeyFactory))
-  (:use (lime layout utils url-helpers)
+  (:use (lime utils url-helpers)
         (appengine-clj datastore users)))
 
 (defn format-date
