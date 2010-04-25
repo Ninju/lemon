@@ -1,6 +1,6 @@
 <project basedir="." default="devserver">
 
-  <property name="app-id" value="lime"/>
+  <property name="app-id" value="lemon"/>
   <property name="app-display-name" value="Lime high score system" />
 
   <property environment="env" />

@@ -1,7 +1,9 @@
-(ns lime.url-helpers
+(ns lemon.url-helpers
   (:use (compojure.html gen page-helpers form-helpers)
         (appengine-clj datastore)
-        (lime utils)))
+        (lemon utils)))
+
+(defn root-url [] "/")
 
 (defn score-url [] "/scores/:device-id")
 
