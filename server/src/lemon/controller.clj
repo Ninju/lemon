@@ -3,9 +3,9 @@
         compojure.http
         (compojure control)
         (appengine-clj datastore users)
-        (lemon views utils url-helpers models)))
+        (lemon layout views utils url-helpers models)))
 
-(defn index [request] (render-root))
+(defn index [request] (layout request "Index" (render-root)))
 
 (defn view-scores-for [request device-id]
   (page-not-found))

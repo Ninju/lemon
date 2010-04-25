@@ -17,7 +17,5 @@
             "I'm implemented with "
             (link-to "http://clojure.org" "Clojure")
             " and "
-            (link-to "http://compojure.com" "Compojure")
-            [:p
-              "Brought to you by "
-              (link-to "http://github.com/Abica" "Abica")]]]))))
+            (link-to "http://compojure.com" "Compojure")]]))))
+
