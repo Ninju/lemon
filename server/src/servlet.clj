@@ -4,9 +4,13 @@
         compojure.http
         (compojure control)
         (appengine-clj users)
-        (lime controller utils url-helpers models)))
+        (lemon controller utils url-helpers models)))
 
-(defroutes lime-app
+(defroutes lemon-app
+  ; root
+  (GET (root-url)
+       (index request))
+
   ; view all boards
   (GET  (score-url)
         (view-scores-for request (:device-id params)))
@@ -19,4 +23,4 @@
   (GET "/*" (or (serve-file (params :*)) :next))
   (ANY "*"  (page-not-found)))
 
-(defservice (wrap-with-user-info lime-app))
+(defservice (wrap-with-user-info lemon-app))
