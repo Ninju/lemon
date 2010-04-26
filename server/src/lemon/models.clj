@@ -16,3 +16,8 @@
   "take a base 64 encoded key and lookup it's entity"
   [encoded-key]
   (-> encoded-key get-key get-entity))
+
+(defn do-create-game [name token]
+  (create {:kind "Game"
+           :name name
+           :token token}))

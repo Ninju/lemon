@@ -3,4 +3,5 @@
         (appengine-clj datastore users)
         (lemon utils url-helpers models)))
 
-(defn render-root [] [:p "Hello, world!"])
+(defn render-root []
+  [:h1 "Welcome to Lemon"])
