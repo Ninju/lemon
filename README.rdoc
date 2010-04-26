@@ -1,11 +1,11 @@
 == About
-Lime is a high score server written for the Corona mobile device framework.
+Lemon is a high score server written for the Corona mobile device framework.
 
-The goal of lime is to offer similar functionality to cocoslive.net, but in
+The goal of lemon is to offer similar functionality to cocoslive.net, but in
 a manner more tailored to lua development.
 
-The server side portion of lime runs on google app engine, and is implemented
-in clojure.
+The server side portion is called lemon and runs on google app engine, and is implemented
+in clojure. The client side is called lime, written in Lua and can be found here: http://github.com/Abica/lime
 
 Right now we're concentrating on the client libraries for lua sdks, but in the
 future there will be an objective C client as well.
