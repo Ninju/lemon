@@ -17,7 +17,19 @@
   [encoded-key]
   (-> encoded-key get-key get-entity))
 
+(defn game-for-token [token]
+  (first (find-all (doto (Query. "Game" (:game_token game_token))))))
+
 (defn do-create-game [name token]
   (create {:kind "Game"
            :name name
            :token token}))
+
+(defn do-create-score [game_token device_id location timestamp score]
+  (let [game (game-for-token game_token)]
+    (create {:kind "Score"
+             :device_id device_id
+             :location location
+             :timestamp timestamp
+             :score score
+             :game game})))
