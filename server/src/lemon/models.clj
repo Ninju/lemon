@@ -17,8 +17,10 @@
   [encoded-key]
   (-> encoded-key get-key get-entity))
 
+(defn find-games [] (find-all (Query. "Game")))
+
 (defn game-for-token [token]
-  (first (find-all (doto (Query. "Game" (:game_token game_token))))))
+  (filter #(= (:game_token %) token) (find-games)))
 
 (defn do-create-game [name token]
   (create {:kind "Game"
