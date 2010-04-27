@@ -10,7 +10,10 @@
 (defn new-game [request] (layout request "New Game" (render-new-game)))
 (defn create-game [request params]
   (let [name (:name params)]
-    (layout request name [:h1 name])))
+    (do (do-create-game (:name params) "asd8HajsdhY")
+        (redirect-to "/games"))))
+
+(defn view-games [request] (layout request "Games" (render-games (all-games))))
 
 (defn view-scores-for [request device-id]
   (page-not-found))

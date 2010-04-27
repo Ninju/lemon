@@ -12,3 +12,14 @@
         (text-field "name")]
     [:p (submit-button "Submit")
         (reset-button "Reset")]))
+
+(defn render-game [game]
+  [:li (:name game)])
+
+(defn render-games [games]
+  [:div#games
+    [:h1 "Games"]
+    (if (empty? games)
+      [:p "There are no games."]
+      [:ul (map render-game games)])
+    (link-to (new-game-url) "Add Game")])

@@ -17,6 +17,9 @@
   ; add game
   (POST (create-game-url) (create-game request params))
 
+  ; view all games
+  (GET (games-url) (view-games request))
+
   ; view all boards
   (GET  (score-url)
         (view-scores-for request (:device-id params)))

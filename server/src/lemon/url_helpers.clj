@@ -8,5 +8,7 @@
 (defn new-game-url [] "/games/new")
 (defn create-game-url [] "/games/create")
 
+(defn games-url [] "/games")
+
 (defn score-url [] "/scores/:device-id")
 (defn create-score-url [] "/admin/scores/add")
