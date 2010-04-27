@@ -7,6 +7,11 @@
 
 (defn index [request] (layout request "Index" (render-root)))
 
+(defn new-game [request] (layout request "New Game" (render-new-game)))
+(defn create-game [request params]
+  (let [name (:name params)]
+    (layout request name [:h1 name])))
+
 (defn view-scores-for [request device-id]
   (page-not-found))
 

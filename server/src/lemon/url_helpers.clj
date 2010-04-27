@@ -5,7 +5,8 @@
 
 (defn root-url [] "/")
 
-(defn score-url [] "/scores/:device-id")
+(defn new-game-url [] "/games/new")
+(defn create-game-url [] "/games/create")
 
-(defn create-score-url []
-  "/admin/scores/add")
+(defn score-url [] "/scores/:device-id")
+(defn create-score-url [] "/admin/scores/add")

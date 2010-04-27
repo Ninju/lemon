@@ -11,6 +11,12 @@
   (GET (root-url)
        (index request))
 
+  ; new game
+  (GET (new-game-url) (new-game request))
+
+  ; add game
+  (POST (create-game-url) (create-game request params))
+
   ; view all boards
   (GET  (score-url)
         (view-scores-for request (:device-id params)))
